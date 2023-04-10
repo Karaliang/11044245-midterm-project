@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alkatra', cursive;
+}
+
+header {
+    background-color: #B4ADA3;
+    text-align: center;
+    color: whitesmoke;
+}
+
+header h1 {
+    padding: 15px;
+}
+
+nav {
+    text-align: center;
+    background-color: #858786;
+}
+
+nav a {
+    font-size: 16pt;
+    color: whitesmoke;
+    padding: 10px;
+    display: inline-block;
+}
+
+#gotop {
+    position: fixed;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 16px;
+    font-size: 25px;
+    background: rgba(228, 211, 211, 0.36);
+    color: #FAFCFD;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#gotop a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #CAB7A2;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template: 250px 160px 500px 400px repeat(4,500px) / repeat(2,600px);
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    grid-template-areas:
+    "info info" 
+    "quote quote"
+    "aboutme awards"
+    "hardskill language"
+    "schoolclub schoolclub"
+    "work work"
+    "competition competition"
+    "project project";
+}
+
+.card {
+    background-color: #f5f5dc;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 40px;
+    font-size: 18pt;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 350px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    
+	position: relative;
+    margin: 0 auto;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front img{
+    height: 300px;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+table, tr, td {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.card.infoc {
+    grid-area: info;
+}
+
+.info {
+    display: flex;
+    margin: 10px auto;
+    font-size: 20pt;
+}
+
+.info img {
+    height: 200px;
+    border-radius: 50%;
+    padding: 0px 15px;
+}
+
+.conimg img {
+    height: 60px;
+    border-radius: 0;
+    margin: 30px 0px 0px 50px;
+    padding: 0px;
+}
+
+.card.quotec {
+    grid-area: quote;
+}
+
+.card.aboutmec {
+    grid-area: aboutme;
+}
+
+.aboutme img {
+    margin: 50px 10px;
+    width: 250px;
+    border-radius: 40px;
+}
+
+.card.awardsc {
+    grid-area: awards;
+}
+
+.awards img {
+    width: 250px;
+}
+
+.loadlook {
+    background-color: #ad9683;
+    width: 70%;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: #8a6d56 4px solid;
+    overflow: hidden;
+    position: relative;
+    left: 8%;
+}
+
+#pr1 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro1 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro1 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 75%;
+    }
+}
+
+#pr2 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro2 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro2 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 70%;
+    }
+}
+
+#pr3 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro3 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro3 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 60%;
+    }
+}
+
+#pr4 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro4 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro4 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 75%;
+    }
+}
+
+#pr5 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro5 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro5 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 40%;
+    }
+}
+
+#pr6 {
+    height: 25px;
+    width: 60%;
+    background-color: #96765b;
+    animation: pro6 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pro6 {
+    0% {
+        width: 0;
+    }
+
+    75%,
+    100% {
+        width: 35%;
+    }
+}
+
+.card.hardskillc {
+    grid-area: hardskill;
+}
+
+.card.languagec {
+    grid-area: language;
+}
+
+.card.schoolclubc {
+    grid-area: schoolclub;
+}
+
+.schoolclub img {
+    height: 250px;
+    width: 300px;
+    border-radius: 40px;
+}
+
+.card.workc {
+    grid-area: work;
+}
+
+.work img {
+    width: 200px;
+    border-radius: 40px;
+}
+
+.card.competitionc {
+    grid-area: competition;
+}
+
+.competition img {
+    border-radius: 20px;
+}
+
+.card.projectc {
+    grid-area: project;
+}
+
+.project img {
+    border-radius: 40px;
+}
+
+footer {
+    background-color: #B4ADA3;
+    text-align: center;
+    color: white;
+    font-size: 18pt;
+}
